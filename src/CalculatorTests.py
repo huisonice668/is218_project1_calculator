@@ -22,10 +22,10 @@ class MyTestCase(unittest.TestCase):
     def test_multiply(self):
         result = Calculator.multiply(20, 2)
 
-    def test_divide(self):
-        result = Calculator.divide(3, 2)
-        self.assertEqual(result, 1)
 
+    def test_square(self):
+        result = Calculator.square(6)
+        self.assertEqual(result, 36)
 
 if __name__ ==  '__main__':
     unittest.main()
