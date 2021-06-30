@@ -25,7 +25,9 @@ class MyTestCase(unittest.TestCase):
     def test_divide(self):
         result = Calculator.divide(3, 2)
         self.assertEqual(result, 1.5)
-        self.assertRaises(ValueError, Calculator.divide, 10, 0)
+
+        with self.assertRaises(ValueError):
+            Calculator.divide(10, 0)
 
     def test_square(self):
         result = Calculator.square(6)
