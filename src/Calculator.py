@@ -1,3 +1,4 @@
+import math
 class Calculator:
     result = 0
 
@@ -15,7 +16,10 @@ class Calculator:
         return x * y
 
     def divide(x, y):
-        if y == 0:
-            print("divendend can not be 0")
         return x / y
 
+    def square(x):
+        return x * x
+
+    def squareRoot(x):
+        return math.sqrt(x)
