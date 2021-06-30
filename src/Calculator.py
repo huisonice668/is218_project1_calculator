@@ -1,26 +1,34 @@
 import math
 
 class Calculator:
-
+    result = 0
     def _init_(self):
         pass
 
-    def add(x, y):
-        return x + y
+    def add(self, x, y):
+        x = int(x)
+        y = int(y)
+        result = x + y
+        return result
 
-    def minus(x, y):
-        return x - y
+    def minus(self, x, y):
+        result = x - y
+        return result
 
-    def multiply(x, y):
-        return x * y
+    def multiply(self, x, y):
+        result = x * y
+        return result
 
-    def divide(x, y):
+    def divide(self, x, y):
         if y == 0:
             raise ValueError("Can not divide by zero")
-        return x / y
+        result = x / y
+        return result
 
-    def square(x):
-        return x * x
+    def square(self, x):
+        result = x * x
+        return result
 
-    def squareRoot(x):
-        return math.sqrt(x)
+    def squareRoot(self, x):
+        result = math.sqrt(x)
+        return result

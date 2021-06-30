@@ -1,5 +1,7 @@
 import unittest
 from Calculator import Calculator
+from CsvReader import CsvReader
+from pprint import pprint
 
 class MyTestCase(unittest.TestCase):
 
@@ -11,8 +13,15 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.calculator, Calculator)
 
     def test_add(self):
-        result = Calculator.add(10, 5)
-        self.assertEqual(result ,15)
+        test_data = CsvReader('src/additionTest.csv').data
+       # pprint(test_data)
+        for row in test_data:
+            #result = Calculator.add(10, 5)
+            #self.assertEqual(result ,15)
+
+
+            self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), int(row['Result']))
+            #self.assertEqual(int(self.calculator.result), int(row['Result']))
 
     def test_minus(self):
         result = Calculator.minus(5, 3)
