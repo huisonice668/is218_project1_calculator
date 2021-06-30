@@ -11,7 +11,6 @@ class MyTestCase(unittest.TestCase):
         calculator = Calculator()
         self.assertEqual(calculator.result, 4)
     '''''''''
-
     def test_add(self):
         result = Calculator.add(10, 5)
         self.assertEqual(result ,15)
