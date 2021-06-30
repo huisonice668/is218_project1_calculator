@@ -2,18 +2,13 @@ import unittest
 from Calculator import Calculator
 
 class MyTestCase(unittest.TestCase):
-    '''''''''
-    def test_instantiate_calculator(self):
-        calculator = Calculator()
-        self.assertIsInstance(calculator, Calculator)
 
-    def test_results_property_calculator(self):
-        calculator = Calculator()
-        self.assertEqual(calculator.result, 4)
-    '''''''''
+    def setUp(self) -> None:
+        self.calculator = Calculator()
+
     def test_instantiate_calculator(self):
-        calculator = Calculator()
-        self.assertIsInstance(calculator, Calculator)
+     #   calculator = Calculator()
+        self.assertIsInstance(self.calculator, Calculator)
 
     def test_add(self):
         result = Calculator.add(10, 5)
