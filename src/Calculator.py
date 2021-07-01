@@ -1,34 +1,54 @@
 import math
+def addition(x, y):
+    return x + y
+
+def subtraction(x, y):
+    x = int(x)
+    y = int(y)
+    return x - y
+
+def multiplication(x, y):
+    return x * y
+
+def division(x, y):
+    if y == 0:
+        raise ValueError("Can not divide by zero")
+    return x / y
+
+def squaring(x):
+    return x * x
+
+def squareRoots(x):
+    return math.sqrt(x)
+
 
 class Calculator:
-    result = 0
+
     def _init_(self):
         pass
 
-    def add(self, x, y):
-        x = int(x)
-        y = int(y)
-        result = x + y
-        return result
+    def add(x, y):
+        return addition(x, y)
+        return x + y
 
-    def minus(self, x, y):
-        result = int(y) - int(x)
-        return result
+    def minus(x, y):
+        return subtraction(x, y)
+        return x - y
 
-    def multiply(self, x, y):
-        result = int(x) * int(y)
-        return result
+    def multiply(x, y):
+        return multiplication(x, y)
+        return x * y
 
-    def divide(self, x, y):
+    def divide(x, y):
+        return division(x, y)
         if y == 0:
             raise ValueError("Can not divide by zero")
-        result = x / y
-        return result
+        return x / y
 
-    def square(self, x):
-        result = x * x
-        return result
+    def square(x):
+        return squaring(x)
+        return x * x
 
-    def squareRoot(self, x):
-        result = math.sqrt(x)
-        return result
+    def squareRoot(x):
+        return squareRoots(x)
+        return math.sqrt(x)
