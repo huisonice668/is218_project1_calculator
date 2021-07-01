@@ -12,11 +12,11 @@ class Calculator:
         return result
 
     def minus(self, x, y):
-        result = x - y
+        result = int(y) - int(x)
         return result
 
     def multiply(self, x, y):
-        result = x * y
+        result = int(x) * int(y)
         return result
 
     def divide(self, x, y):
